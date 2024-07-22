@@ -1,16 +1,105 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <header role="banner">
+        <h1 role="heading">My Accessible Portfolio</h1>
+    </header>
 
+    <nav role="navigation">
+        <ul role="list">
+            <li role="listitem"><a href="#about">About</a></li>
+            <li role="listitem"><a href="#projects">Projects</a></li>
+            <li role="listitem"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section id="about">
+            <h2 role="heading">About Me</h2>
+            <img src="profile.jpg" alt="Profile picture" role="img">
+            <p>Hello! I am an enthusiastic web developer with a passion for creating accessible and user-friendly websites. I love to learn and implement new technologies to improve web experiences for all users.</p>
+        </section>
+
+        <section id="projects">
+            <h2 role="heading">Projects</h2>
+            <ul role="list">
+                <li role="listitem">Project 1: Accessible Web Design</li>
+                <li role="listitem">Project 2: Responsive Layouts</li>
+                <li role="listitem">Project 3: JavaScript Interactivity</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2 role="heading">Contact Me</h2>
+            <p>If you would like to get in touch, please email me at <a href="mailto:example@example.com">example@example.com</a>.</p>
+        </section>
+    </div>
 </body>
 
 </html>
